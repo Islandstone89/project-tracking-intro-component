@@ -1,0 +1,111 @@
+
+/* HEADER STYLES */
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-100);
+    background-color: var(--clr-neutral-200);
+    padding-block-start: var(--size-400);
+    padding-block-end: var(--size-400);
+    padding-inline-start: clamp(var(--size-400), 0.85rem + 5.71vw, var(--size-1200));
+    padding-inline-end: clamp(var(--size-400), 0.85rem + 5.71vw, var(--size-1200));
+}
+
+.nav__menu {
+    display: none;
+
+    @media (width > 45rem) {
+        display: flex;
+        align-items: center;
+        gap: var(--size-1200);
+        margin-inline-start: auto;
+    }
+}
+
+.nav__menu__list__primary {
+    display: flex;
+    align-items: center;
+    gap: var(--size-500);
+}
+
+.nav__menu__list__secondary {
+    opacity: .75;
+}
+
+
+.nav__menu__link {
+    
+    &:is(:hover, :focus-visible) {
+        text-decoration: underline;
+        opacity: .8;
+    }
+}
+
+.btn {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.btn-close {
+    display: none;
+}
+
+.icon-open {
+    display: none;
+
+    @media (width < 45rem) {
+        display: block;
+    }
+}
+
+body:has(.btn-open[aria-expanded="true"]) {
+
+    .btn-open {
+        display: none;
+    }
+
+    .btn-close {
+        display: block;
+    }
+
+    .nav__menu {
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--size-300);
+        background-color: var(--clr-neutral-100);
+        text-align: center;
+        padding: var(--size-300);
+        border-radius: 3px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .nav__menu__list__primary {
+        flex-direction: column;
+        gap: var(--size-300);
+    }
+
+    .nav__menu__list__secondary {
+       position: relative;
+    }
+
+    .nav__menu__list__secondary::before {
+        position: absolute;
+        top: -50%;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: var(--clr-primary);
+        opacity: .15;
+    }
+}
+

@@ -1,0 +1,37 @@
+{
+  "name": "project-tracking-intro-component-mysolution",
+  "version": "1.0.0",
+  "description": "![Design preview for the Project tracking intro component coding challenge](./design/desktop-preview.jpg)",
+  "main": "public/index.html",
+  "scripts": {
+    "build:sass": "sass  --no-source-map src/sass:public/css",
+    "copy:script": "copyfiles -u 1 ./src/app/**/* public",
+    "copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
+    "copy:images": "copyfiles -u 1 ./src/images/**/* public",
+    "copy:html": "copyfiles -u 1 ./src/*.html public",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:script": "onchange \"src/app/**/*\" -- npm run copy:script",
+    "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
+    "watch:images": "onchange \"src/*.html\" -- npm run copy:images",
+    "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
+    "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server public --files public",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all copy:html build:*",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.3",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^6.1.2",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.83.1"
+  },
+  "devDependencies": {
+    "check-dependencies": "^2.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

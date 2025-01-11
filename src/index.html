@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="app/script.js"></script>
+  
+  <title>Frontend Mentor | Project tracking intro component</title>
+</head>
+<body> 
+  <header class="header">
+    
+    <div class="logo-wrapper">
+      <a href="#" class="logo-link">
+        <img src="images/logo.svg" alt="Home" width="32" height="32">
+    </a><!-- end logo-link -->
+  </div><!-- end logo-wrapper -->
+
+    <nav class="nav__menu js-nav-menu">
+      <ul class="nav__menu__list nav__menu__list__primary">
+
+        <li class="nav__menu__list__item">
+          <a href="#" class="nav__menu__link">Product</a>
+        </li><!-- end nav__menu__list__item-->
+
+        <li class="nav__menu__list__item">
+          <a href="#" class="nav__menu__link">Features</a>
+        </li><!-- end nav__menu__list__item-->
+
+        <li class="nav__menu__list__item">
+          <a href="#" class="nav__menu__link">Pricing</a>
+        </li><!-- end nav__menu__list__item-->
+      </ul><!-- end nav__menu__list__primary -->
+
+      <ul class="nav__menu__list nav__menu__list__secondary">
+        <li class="nav__menu__list__item">
+          <a href="#" class="nav__menu__link">Login</a>
+        </li><!-- end nav__menu__list__item-->
+      </ul><!-- end nav__menu__list__secondary -->
+
+    </nav><!-- end nav__menu -->
+
+    <button class="btn btn-open js-btn-open" aria-expanded="false">
+      <span class="visually-hidden">Open menu</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-open js-icon-open" aria-hidden="true" width="24" height="16">
+        <g fill="#242942" fill-rule="evenodd">
+          <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/>
+        </g>
+      </svg><!-- end icon-close-->
+  </button><!-- end btn-open-->
+  
+  <button class="btn btn-close js-btn-close">
+    <span class="visually-hidden">Close menu</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-close js-icon-close" aria-hidden="true" width="20" height="20">
+      <path fill="#242942" fill-rule="evenodd" d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"/>
+    </svg><!-- end icon-open-->
+  </button><!-- end btn-close-->
+
+  </header><!-- end header-->
+
+  <main class="main">
+    <div class="content">
+
+      <div class="image-wrapper">
+        <img src="images/illustration-devices.svg" alt="" width="964" height="464" class="main-image">
+      </div><!-- end image-wrapper -->
+
+      <div class="text flow">
+        <div class="kicker">
+          <p class="kicker__tag">New</p>
+          <p class="kicker__text">Monograph Dashboard</p>
+        </div><!-- end kicker -->
+
+        <h1 class="main-heading">Powerful insights into your team</h1>
+        <p class="tagline">Project planning and time tracking for agile teams</p>
+
+        <div class="demo">
+          <a href="#" class="demo__link">Schedule a demo</a>
+          <p class="demo__text">to see a preview</p>
+        </div><!-- end demo -->
+      </div><!-- end text -->
+
+    </div><!-- end content -->
+  </main><!-- end main-->
+</body>
+</html>

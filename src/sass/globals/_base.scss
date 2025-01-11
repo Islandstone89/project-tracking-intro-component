@@ -1,0 +1,14 @@
+
+body {
+    background-color: var(--clr-neutral-100);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-200);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--clr-primary);
+}
+
+:is(.header, .main) {
+    max-width: 90rem;
+    margin-inline: auto;
+}
